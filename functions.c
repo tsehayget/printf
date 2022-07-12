@@ -2,12 +2,10 @@
 #include <unistd.h>
 #include <stdlib.h>
 /**
-*
 * _putchar - writes the character to output
 * @c: the character to print
 * Return: 1 on success
 * on error returns -1
-*
 */
 int _putchar(char c)
 {
@@ -30,4 +28,19 @@ void _puts(char *str)
 	{
 		_putchar(str[i]);
 	}
+}
+/**
+ * _strlen - reset number
+ * @s: pointer char
+ * Return: int length
+ */
+int _strlen(char *s)
+{
+	int len = 0;
+
+	while (*s++)
+	{
+		len++;
+	}
+	return (len);
 }
