@@ -6,7 +6,6 @@
 * print_character - prints character
 * @l: list of arguments
 * Return: amount of characters
-* 
 */
 int print_character(va_list l)
 {
@@ -16,9 +15,8 @@ int print_character(va_list l)
 
 /**
 * print_sign - print sign
-* @l: va_list parameter
-* @b: base 10, 8, 16, 2 etc..
-* 
+* @l: list of arguments
+* @b: base 10, 8, 16, 2 etc.
 * Return: num of characters
 */
 int print_sign(va_list l, int b)
@@ -36,5 +34,48 @@ int print_sign(va_list l, int b)
 	s = convert_to("0123456789ABCDEF", i, b);
 	_puts(s);
 	count += _strlen(s);
+	return (count);
+}
+
+/**
+ * print_unsign - print_unsign
+ * @l: va_list parameter
+ * @b: base 10, 8, 16 etc.
+ * Return: num of characters
+ */
+int print_unsign(va_list l, int b)
+{
+	int count = 0;
+	unsigned int i;
+	char *s;
+
+	i = va_arg(l, unsigned int);
+	s = convert_to("0123456789ABCDEF", i, b);
+	_puts(s);
+	count = _strlen(s);
+
+	return (count);
+}
+
+/**
+ * print_string - prints string
+ * @l: list of arguments
+ *
+ * Return: count
+ */
+int print_string(va_list l)
+{
+	char *s;
+	int count = 0;
+
+	s = va_arg(l, char *);
+	if (!s)
+	{
+		s = "(null)";
+		_puts(s);
+		return (_strlen(s));
+	}
+	_puts(s);
+	count = _strlen(s);
 	return (count);
 }
