@@ -5,9 +5,7 @@
 * function_man - functions
 * @l: list of arguments
 * @c: character to find
-* Return: count of printed characters
-* 
-* 
+* Return: count of printed character
 */
 int function_man(char c, va_list l)
 {
@@ -25,7 +23,6 @@ int function_man(char c, va_list l)
 * @l: list of arguments
 * @c: character to find
 * Return: count
-* 
 */
 int _switch(char c, va_list l)
 {
