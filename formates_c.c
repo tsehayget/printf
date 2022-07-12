@@ -68,9 +68,83 @@ int print_rot13(va_list l)
 		else
 		{
 			for (i = 0; i <= 52; i++)
-				if (s[j] == rot13[i])
-					_putchar(ROT13[i]);
+			if (s[j] == rot13[i])
+			_putchar(ROT13[i]);
 		}
 	}
 	return (j);
+}
+/**
+* print_ptr - print_base
+* @l: list of arguments 
+* Return: address pointer
+*/
+
+int print_ptr(va_list l)
+{
+	unsigned long int dec, buffr;
+	char c[100];
+	int count, n, i;
+
+	dec = (unsigned long int)va_arg(l, void*);
+	buffr = dec;
+	count = 1;
+	i = 0;
+
+	if (!dec)
+	{
+		_puts("(nil)");
+		return (5);
+	}
+	while (buffr)
+	{
+		buffr /= 16;
+		count++;
+	}
+	c[count + 1] = '\0';
+	while (dec > 0)
+	{
+		n = (dec % 16);
+		if (n >= 0 && n <= 9)
+		c[count] = ((char)(n + '0'));
+		else
+		c[count] = ((char)(n + 'W'));
+		count--;
+		dec /= 16;
+	}
+	c[0] = '0';
+	c[1] = 'x';
+	while (c[i] != '\0')
+	{
+		_putchar(c[i]);
+		i++;
+	}
+	return (i);
+}
+
+
+/**
+* convert_to - convert numbers
+* 
+* @rep: char rep[] = "0123456789ABCDEF";(representation)
+* @n: n to transform
+* @b: base to transform n
+* Return char*
+*/
+
+char *convert_to(char rep[], unsigned int n, int b)
+{
+	char *p;
+	static char buffer[128];
+	int mod = 0;
+
+	p = &buffer[127];
+	*p = '\0';
+
+	do {
+	mod = n % b;
+	*--p = rep[mod];
+	n /= b;
+	} while (n != 0);
+	return (p);
 }
