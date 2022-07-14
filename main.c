@@ -42,31 +42,31 @@ int main(void)
 	printf("Unknown:[%r]\n");
 	return (0);
 }
-alex@ubuntu:~/c/printf$ gcc -Wall -Wextra -Werror -pedantic -std=gnu89 -Wno-format *.c
-alex@ubuntu:~/c/printf$ ./printf
+gcc - Wall - Wextra - Werror - pedantic - std = gnu89 - Wno - format  * .c
+. / printf
 Let's try to printf a simple sentence.
 Let's try to printf a simple sentence.
-Length:[39d, 39i]
-Length:[39, 39]
-Negative:[-762534d]
-Negative:[-762534]
-Unsigned:[2147484671u]
-Unsigned:[2147484671]
-Unsigned octal:[20000001777o]
-Unsigned octal:[20000001777]
-Unsigned hexadecimal:[800003ff, 800003FFx]
-Unsigned hexadecimal:[800003ff, 800003FF]
-Character:[Hc]
-Character:[H]
-String:[I am a string !s]
-String:[I am a string !]
-Address:[0x7ffe637541f0p]
-Address:[0x7ffe637541f0]
-Percent:[%%]
-Percent:[%]
-Len:[13d]
-Len:[12]
-Unknown:[
-]FF300008 ,ff300
-]21[:neLr]
-Unknown: [%r]
+Length :[39d, 39i]
+Length :[39, 39]
+Negative :[-762534d]
+Negative :[-762534]
+Unsigned :[2147484671u]
+Unsigned :[2147484671]
+Unsigned octal :[20000001777o]
+Unsigned octal :[20000001777]
+Unsigned hexadecimal :[800003ff, 800003FFx]
+Unsigned hexadecimal :[800003ff, 800003FF]
+Character :[Hc]
+Character :[H]
+String :[I am a string !s]
+String :[I am a string !]
+Address :[0x7ffe637541f0p]
+Address :[0x7ffe637541f0]
+Percent :[%%]
+Percent :[%]
+Len :[13d]
+Len :[12]
+Unknown :[
+]FF300008, ff300
+] 21[: neLr]
+Unknown :[%r]
